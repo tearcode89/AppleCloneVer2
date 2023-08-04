@@ -1,0 +1,13 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+modules.xml
+AppleCloneVer2.iml
+vcs.xml
+.DS_Store
+codeStyles
+Project.xml
+.idea
+codeStyleConfig.xml
