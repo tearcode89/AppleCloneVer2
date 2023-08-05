@@ -88,6 +88,8 @@
                 rv = (currentYOffset - partScrollStart) / partScrollHeight * (values[1] - values[0]) + values[0];
             } else if (currentYOffset < partScrollStart) {
                 rv = values[0]
+            } else if (currentYOffset > partScrollEnd) {
+                rv = values[1];
             }
         } else {
             rv = scrollRatio * (values[1] - values[0]) + values[0];
@@ -100,8 +102,6 @@
         const objs = sceneInfo[currentScene].objs
         const values = sceneInfo[currentScene].values
         const currentYOffset = yOffset - prevScrollHeight
-
-        console.log(currentScene);
 
         switch (currentScene) {
             case 0:
