@@ -23,7 +23,7 @@
             },
             values: {
                 videoImageCount: 300,
-                imageSequenceL: [0, 299],
+                imageSequence: [0, 299],
                 messageA_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
                 messageB_opacity_in: [0, 1, { start: 0.3, end: 0.4 }],
                 messageC_opacity_in: [0, 1, { start: 0.5, end: 0.6 }],
@@ -104,10 +104,9 @@
         let imgElem;
         for (let i = 0; i < sceneInfo[0].values.videoImageCount; i++) {
             imgElem = new Image();
-            imgElem.src = `./video/001/IMG_${6726 + i}.jpg`
+            imgElem.src = `./video/001/IMG_${6726 + i}.JPG`
             sceneInfo[0].objs.videoImages.push(imgElem);
         }
-        console.log(sceneInfo[0].objs.videoImages)
     }
     setCanvasImage();
 
@@ -171,6 +170,9 @@
         switch (currentScene) {
             case 0:
                 // console.log('0 play')
+                let sequence = Math.round(calcValues(values.imageSequence, currentYOffset))
+                objs.context.drawImage(objs.videoImages[sequence], 0, 0)
+
                 if (scrollRatio <= 0.22) {
                     // in
                     objs.messageA.style.opacity = calcValues(values.messageA_opacity_in, currentYOffset);
