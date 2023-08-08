@@ -108,6 +108,7 @@ a {
 .desc-message {
     width: 50%;
     font-weight: bold;
+    opacity: 0;
 }
 .pin {
     width: 1px;
