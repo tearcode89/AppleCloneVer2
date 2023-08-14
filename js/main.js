@@ -46,7 +46,6 @@
         {   
             // 1
             type: 'normal',
-            // heightNum: 5, // type:'normal'에서는 필요 없음 
             scrollHeight: 0,
             objs: {
                 container: document.querySelector('#scroll-section-1')
@@ -145,6 +144,15 @@
         // console.log(sceneInfo[3].objs.images);
     }
     setCanvasImage();
+
+    function checkMenu() {
+        if (yOffset > 44) {
+            document.body.classList.add('local-nav-sticky')
+        } else {
+            document.body.classList.remove('local-nav-sticky')
+
+        }
+    }
 
     function setLayout() {
         // 각 스크롤 섹션의 높이 세팅
@@ -483,6 +491,7 @@
     window.addEventListener('scroll', () => {
         yOffset = window.pageYOffset;
         scrollLoop();
+        checkMenu()
     })
     window.addEventListener('load', () => {
         setLayout();
