@@ -112,6 +112,7 @@
             values: {
                 rect1X: [ 0, 0, { start: 0, end: 0} ],
                 rect2X: [ 0, 0, { start: 0, end: 0} ],
+                imageBlendY: [ 0, 0, { start: 0, end: 0}],
                 rectStartY: 0
             }
         },
@@ -408,6 +409,9 @@
                     step = 2;
                     // console.log('캔버스 닿은 후')
                     // 이미지 블렌드
+                    // imageBlendY: [0, 0, {start: 0,end: 0}]
+                    objs.context.drawImage(objs.images[1], 0, 200);
+
                     objs.canvas.classList.add('sticky')
                     objs.canvas.style.top = `${-(objs.canvas.height - objs.canvas.height * canvasScaleRatio) / 2}px`
                 }
