@@ -182,6 +182,9 @@ body#show-scene-3 #scroll-section-3 .sticky-elem {
     top: 0;
     height: 100%;
 }
+.scroll-effect-end .sticky {
+    display: none !important;
+}
 .sticky-elem-canvas canvas {
     position: absolute;
     top: 50%;
@@ -242,6 +245,10 @@ body#show-scene-3 #scroll-section-3 .sticky-elem {
 /* .loading-circle:hover circle {
     stroke-dashoffset: -157;
 } */
+
+.normal-content {
+    margin-bottom: 10rem;
+}
 
 @media (min-width: 1024px) {
     #scroll-section-0 h1 {
